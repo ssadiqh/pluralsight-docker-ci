@@ -1,11 +1,11 @@
 # The deployment section should be excluded until
-# it is explicitly included in module 6
+# it is explicitly included in module 5
 
 deployment:
   dockerhub:
     branch: master
     commands:
-      - curl -H "Content-Type: application/json" --data '{"build": true}' -X POST $DOCKER_HUB_TRIGGER
+      - $DOCKER_HUB_TRIGGER
 
 test:
   override:    
